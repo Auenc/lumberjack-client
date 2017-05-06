@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-xs-12">
+    <md-card>
+      <md-card-header>
+        <md-card-title>
+          <h4>Create a new Collector</h4></md-card-title>
+        <md-card-subtitle>
+          Please enter the following details
+        </md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <md-input-container>
+          <input mdInput placeholder="Collector Name" [(ngModel)]="name">
+        </md-input-container>
+      </md-card-content>
+      <md-card-actions class="clearfix">
+
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>
+<button  class="pull-right" md-fab (click)="addCollector()"><md-icon>check</md-icon></button>

@@ -1,0 +1,32 @@
+<div class="row deleteRow" *ngIf="program">
+  <div class="col-xs-12">
+    <button class="delete pull-right" md-raised-button (click)="confirmDelete()"> Delete </button>
+    <a class="pull-right edit" md-raised-button routerLink="/programs/edit/{{program._id}}">Edit</a>
+  </div>
+
+</div>
+<div class="row">
+  <md-card *ngIf="program">
+    <md-card-header>
+      <md-card-title>
+        <h4>{{program.name}}</h4></md-card-title>
+      <md-card-subtitle>
+      </md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+      <md-tab-group>
+        <md-tab label="Details">
+
+          <table align="center">
+            <tr>
+              <td> Token: </td>
+              <td> {{program.token}}</td>
+            </tr>
+          </table>
+
+        </md-tab>
+        <md-tab label="Programs">Content 2</md-tab>
+      </md-tab-group>
+    </md-card-content>
+  </md-card>
+</div>

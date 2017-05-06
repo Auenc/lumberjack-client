@@ -1,0 +1,34 @@
+<div class="row deleteRow" *ngIf="collector">
+  <div class="col-xs-12">
+    <button class="delete pull-right" md-raised-button (click)="confirmDelete()"> Delete </button>
+    <a class="pull-right edit" md-raised-button routerLink="/collectors/edit/{{collector._id}}">Edit</a>
+  </div>
+
+</div>
+<div class="row">
+  <md-card *ngIf="collector">
+    <md-card-header>
+      <md-card-title>
+        <h4>{{collector.name}}</h4></md-card-title>
+      <md-card-subtitle>
+        <span *ngIf="!collector.connected">Offline</span>
+        <span *ngIf="collector.connected">Online</span>
+      </md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+      <md-tab-group>
+        <md-tab label="Details">
+
+          <table align="center">
+            <tr>
+              <td> Token: </td>
+              <td> {{collector.token}}</td>
+            </tr>
+          </table>
+
+        </md-tab>
+        <md-tab label="Programs">Content 2</md-tab>
+      </md-tab-group>
+    </md-card-content>
+  </md-card>
+</div>

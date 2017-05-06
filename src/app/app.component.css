@@ -1,0 +1,37 @@
+.example-sidenav-fab-container {
+  height: 100%;
+}
+
+.example-sidenav-fab-container md-sidenav {
+  max-width: 200px;
+  min-height: 100%;
+}
+
+.example-sidenav-fab-container .md-sidenav-content,
+.example-sidenav-fab-container md-sidenav {
+  min-height: 100%;
+  display: flex;
+  overflow: visible;
+}
+
+.navbar {
+  overflow: auto;
+  border-right: 1px solid #ffc107;
+}
+.navbar md-list{
+  width:100%;
+}
+
+.navButton{
+  width:200px;
+}
+.active{
+  background-color:#673ab7;
+  color:rgba(255,255,255,.87);
+}
+.menu{
+  margin-right: 10px;
+}
+.menu:hover{
+  cursor:pointer;
+}

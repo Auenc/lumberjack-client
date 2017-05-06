@@ -1,0 +1,25 @@
+.center{
+  text-align: center;
+}
+.cardList{
+  margin:10px;
+}
+
+md-card{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+md-card:hover{
+  cursor:pointer;
+}
+
+.createBar{
+  display: block;
+  clear:both;
+}
+
+.createButton{
+  margin-right: 10px;
+  background-color: #673ab7;
+  color:#fff;
+}

@@ -1,0 +1,14 @@
+.deleteRow{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.edit{
+  color:#fff;
+  background-color: #673ab7;
+  margin-right: 10px;
+}
+
+.delete{
+  color:#fff;
+  background-color: #d32f2f;
+}
