@@ -9,9 +9,22 @@
         </md-card-subtitle>
       </md-card-header>
       <md-card-content>
-        <md-input-container>
-          <input mdInput placeholder="program Name" [(ngModel)]="program.name">
-        </md-input-container>
+        <table style="width:100%">
+          <tr>
+            <td>
+            <md-input-container>
+              <input mdInput placeholder="Program Name" [(ngModel)]="program.name">
+            </md-input-container>
+          </td>
+          </tr>
+          <tr>
+            <td>
+              <md-input-container>
+                <input mdInput placeholder="Description" value="A Hello, World Lumberjack Application">
+              </md-input-container>
+          </td>
+        </tr>
+        </table>
       </md-card-content>
       <md-card-actions class="clearfix">
 

@@ -13,7 +13,9 @@
   background-color: #d32f2f;
 }
 
-.instance{
-  margin-top: 5px;
-  margin-bottom: 5px;
+.actions{
+  padding-top:10px;
+}
+.actions md-card{
+  border-color: #454545;
 }

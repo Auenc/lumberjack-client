@@ -17,7 +17,11 @@
       <md-tab-group>
         <md-tab label="Details">
 
-          <table align="center">
+          <table align="center" style="width:100%;">
+            <tr>
+              <td> Description: </td>
+              <td> <p>A Hello, World Lumberjack Application</p></td>
+            </tr>
             <tr>
               <td> Token: </td>
               <td> {{program.token}}</td>
@@ -25,7 +29,71 @@
           </table>
 
         </md-tab>
-        <md-tab label="Programs">Content 2</md-tab>
+        <md-tab label="Structure">
+          <div class="col-xs-6">
+            <h4>Functions</h4>
+            <md-card *ngFor="let function of program.Functions">
+              <md-card-header>
+                <md-card-title>{{function.Name}}</md-card-title>
+                <md-card-subtitle></md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+
+          </div>
+          <div class="col-xs-6">
+            <h4>Classes</h4>
+            <p>No classes recorded</p>
+          </div>
+        </md-tab>
+        <md-tab label="Instances">
+          <div class="col-xs-12">
+            <md-card *ngFor="let instance of program.Instances" routerLink="/programs/instance/{{instance._id}}">
+              <md-card-header>
+                <md-card-title>{{program.name}}</md-card-title>
+                <md-card-subtitle>{{instance._id}}</md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+          </div>
+        </md-tab>
+        <md-tab label="Statistics" style="padding-top:5px;">
+          <div class="col-xs-4" style="text-align:center;margin-bottom:5px;">
+            <md-card>
+              <md-card-header>
+                <md-card-title>Average Instance Runtime</md-card-title>
+                <md-card-subtitle>{{program.getAverageRunTime()}}</md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+          </div>
+
+          <div class="col-xs-4" style="text-align:center;margin-bottom:5px;">
+            <md-card>
+              <md-card-header>
+                <md-card-title>Average Number of states</md-card-title>
+                <md-card-subtitle>{{program.getAverageStates()}}</md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+          </div>
+
+          <div class="col-xs-4" style="text-align:center;margin-bottom:5px;">
+            <md-card>
+              <md-card-header>
+                <md-card-title>Number of Instances</md-card-title>
+                <md-card-subtitle>{{program.Instances.length}}</md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+          </div>
+
+        </md-tab>
       </md-tab-group>
     </md-card-content>
   </md-card>

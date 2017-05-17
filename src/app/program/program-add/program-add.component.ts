@@ -20,7 +20,7 @@ export class ProgramAddComponent implements OnInit {
   }
 
   addProgram(){
-    var prog = new Program();
+    var prog = new Program(null);
     prog.name = this.name.trim();
     if(!this.name){return;}
 

@@ -1,0 +1,76 @@
+<div class="row deleteRow" >
+  <div class="col-xs-12">
+    <button class="delete pull-right" md-raised-button> Delete </button>
+  </div>
+
+</div>
+<div class="row">
+  <md-card *ngIf="instance">
+    <md-card-header>
+      <md-card-title>
+        <h4>{{instance.Program.name}} Instance: {{instance._id}}</h4></md-card-title>
+      <md-card-subtitle>
+      </md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+      <md-tab-group>
+        <md-tab label="Actions">
+
+          <div class="col-xs-12 actions">
+
+            <md-card *ngFor="let action of instance.Actions | sortActionByTime" routerLink="/programs/function/{{action.getFunctionId()}}">
+              <md-card-header>
+                <md-card-title>{{action.print()}}</md-card-title>
+                <md-card-subtitle>{{action.TimeCreated}}</md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+
+          </div>
+
+        </md-tab>
+        <md-tab label="Structure" style="text-aign:center;">
+          <div class="col-xs-6">
+            <h4>Functions</h4>
+            <md-card *ngFor="let function of instance.Functions" routerLink="/programs/function/{{function._id}}">
+              <md-card-header>
+                <md-card-title>{{function.Name}}</md-card-title>
+                <md-card-subtitle></md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+          </div>
+          <div class="col-xs-6">
+            <h4>Classes</h4>
+            <p>No classes recorded</p>
+          </div>
+        </md-tab>
+        <md-tab label="Statistics" style="padding-top:10px;">
+          <div class="col-xs-6" style="text-align:center;">
+            <md-card>
+              <md-card-header>
+                <md-card-title>Runtime</md-card-title>
+                <md-card-subtitle>{{instance.getEndTimeString()}}</md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+          </div>
+
+          <div class="col-xs-6" style="text-align:center;">
+            <md-card>
+              <md-card-header>
+                <md-card-title>Number of states</md-card-title>
+                <md-card-subtitle>{{instance.getNumberOfStates()}}</md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+          </div>
+        </md-tab>
+      </md-tab-group>
+    </md-card-content>
+  </md-card>
+</div>

@@ -18,7 +18,7 @@ export class CollectorAddComponent implements OnInit {
   }
 
   addCollector(){
-    var col = new Collector();
+    var col = new Collector(null);
     col.name = this.name.trim();
     if(!this.name) {return;}
     this.collectorService.addCollector(col).then(col => {

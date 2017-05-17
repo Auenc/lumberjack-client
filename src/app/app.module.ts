@@ -15,6 +15,11 @@ import {CollectorService} from './collector/collector.service';
 import {ProgramModule} from './program/program.module';
 import {ProgramService} from './program/program.service';
 
+import {InstanceService} from "./program/instance/instance.service";
+import {ActionService} from "./program/action/action.service";
+import {FunctionService} from "./program/function/function.service";
+import {VariableService} from "./program/variable/variable.service";
+import {FunctionStateService} from "./program/function-state/function-state.service";
 import {AppRouterModule} from './app-router/app-router.module';
 
 
@@ -39,7 +44,8 @@ import {AppRouterModule} from './app-router/app-router.module';
     MdButtonModule,
     MdCheckboxModule
   ],
-  providers: [CollectorService, ProgramService],
+  providers: [CollectorService, ProgramService, InstanceService,
+     ActionService, FunctionService, VariableService, FunctionStateService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

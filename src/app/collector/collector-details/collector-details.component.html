@@ -24,10 +24,30 @@
               <td> Token: </td>
               <td> {{collector.token}}</td>
             </tr>
+            <tr>
+              <td> Description: </td>
+              <td style="padding-left:10px;"> A new collector</td>
+            </tr>
           </table>
 
         </md-tab>
-        <md-tab label="Programs">Content 2</md-tab>
+        <md-tab label="Program Instances">
+          <div class="col-xs-12">
+            <md-card class="instance" *ngFor="let instance of collector.Instances"
+            routerLink="/programs/instance/{{instance._id}}">
+              <md-card-header>
+                <md-card-title>{{instance.Program.name}}</md-card-title>
+                <md-card-subtitle>{{instance._id}}</md-card-subtitle>
+              </md-card-header>
+              <md-card-content>
+              </md-card-content>
+            </md-card>
+          </div>
+
+
+
+
+        </md-tab>
       </md-tab-group>
     </md-card-content>
   </md-card>
